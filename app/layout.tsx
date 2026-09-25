@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pokemon Cards",
   description: "Explore Pokemon, their stats, abilities, types and moves.",
+   colorScheme: "light",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
