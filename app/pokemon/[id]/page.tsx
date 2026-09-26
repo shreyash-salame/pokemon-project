@@ -69,7 +69,6 @@ export default async function PokemonDetails({
         </Link>
 
         <div className="rounded-2xl bg-white p-8 shadow-md">
-          // Pokmon Image and Name 
           <div className="text-center">
             <Image
               src={pokemon.sprites.other["official-artwork"].front_default}
@@ -84,7 +83,7 @@ export default async function PokemonDetails({
 
             <p className="mt-2 text-gray-500">#{id}</p>
           </div>
-          // Types
+          
           <div className="mt-8">
             <h2 className="mb-3 text-2xl font-bold">Types</h2>
 
@@ -99,7 +98,7 @@ export default async function PokemonDetails({
               ))}
             </div>
           </div>
-          //Abilities
+          
           <div className="mt-8">
             <h2 className="mb-3 text-2xl font-bold">Abilities</h2>
 
@@ -111,7 +110,7 @@ export default async function PokemonDetails({
               ))}
             </ul>
           </div>
-          // Stats
+          
           <div className="mt-8">
             <h2 className="mb-4 text-2xl font-bold">Stats</h2>
 
@@ -148,7 +147,7 @@ export default async function PokemonDetails({
               })}
             </div>
           </div>
-          // Moves
+          
           <div className="mt-8">
             <h2 className="mb-3 text-2xl font-bold">Moves</h2>
 

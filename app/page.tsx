@@ -28,7 +28,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-gray-100">
-      // heder 
+      
       <section className="bg-linear-to-b from-red-600 to-red-500 px-6 pb-16 pt-14 text-center text-white">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
           Pokemon Cards
