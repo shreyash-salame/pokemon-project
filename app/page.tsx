@@ -10,7 +10,6 @@ type PokemonResponse = {
 };
 
 async function getPokemon(): Promise<Pokemon[]> {
-  // cache the list for 1 hour, the data almost never changes
   const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1000", {
     next: { revalidate: 3600 },
   });
@@ -29,7 +28,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-gray-100">
-      {/* Header */}
+      // heder 
       <section className="bg-linear-to-b from-red-600 to-red-500 px-6 pb-16 pt-14 text-center text-white">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
           Pokemon Cards

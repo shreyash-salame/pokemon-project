@@ -13,7 +13,7 @@ type PokemonListProps = {
   pokemon: Pokemon[];
 };
 
-const ITEMS_PER_PAGE = 20;
+const ItemsPerPAGE = 20;
 
 function getPokemonId(url: string): string {
   const parts = url.split("/");
@@ -28,14 +28,14 @@ export default function PokemonList({ pokemon }: PokemonListProps) {
     item.name.toLowerCase().includes(search.toLowerCase()),
   );
 
-  const totalPages = Math.ceil(filteredPokemon.length / ITEMS_PER_PAGE);
-  const startIndex = (page - 1) * ITEMS_PER_PAGE;
+  const totalPages =Math.ceil(filteredPokemon.length/ItemsPerPAGE);
+  const startIndex =(page - 1) *ItemsPerPAGE;
   const currentPokemon = filteredPokemon.slice(
     startIndex,
-    startIndex + ITEMS_PER_PAGE,
+    startIndex + ItemsPerPAGE,
   );
 
-  // show max 5 page numbers at a time
+  
   const firstPage = Math.max(1, Math.min(page - 2, totalPages - 4));
   const lastPage = Math.min(totalPages, firstPage + 4);
   const pageNumbers: number[] = [];
@@ -50,7 +50,7 @@ export default function PokemonList({ pokemon }: PokemonListProps) {
 
   function handleSearch(value: string) {
     setSearch(value);
-    setPage(1); // go back to first page on every new search
+    setPage(1); 
   }
 
   return (
@@ -67,7 +67,7 @@ export default function PokemonList({ pokemon }: PokemonListProps) {
 
       {filteredPokemon.length === 0 ? (
         <p className="py-10 text-center text-gray-500">
-          No Pokemon found for &quot;{search}&quot;.
+          No Pokemon found for
         </p>
       ) : (
         <>
@@ -103,7 +103,7 @@ export default function PokemonList({ pokemon }: PokemonListProps) {
             })}
           </div>
 
-          {/* Pagination */}
+          //Pagination 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
             <button
               onClick={() => changePage(page - 1)}
